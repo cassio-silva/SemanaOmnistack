@@ -1,0 +1,36 @@
+import React, { useState } from 'react';
+
+
+/*
+  Componente: Bloco isolado de Html, CSS e JS o qual não interfere no restante da aplicação
+  Propriedade(Atributo): Informações que um componente Pai passa para um Componente Filho
+  Estado: Informações mantidas pelo componente (Vide Imutabilidade)
+
+*/
+
+
+function App() {
+
+  const [counter, setCounter] = useState(0);
+
+  function incrementCounter(){
+    setCounter(counter + 1);
+  }
+
+  return (
+    /*
+    <>
+      <Header title= "Meu painel 1"/>
+      <Header title= "Meu painel 2"/>
+      <Header title= "Meu painel 3"/>
+    </>
+    */
+    <>
+      <h1>Contador: {counter}</h1>
+      <button onClick={incrementCounter} >Incrementar</button>
+    </>
+
+  );
+}
+
+export default App;
